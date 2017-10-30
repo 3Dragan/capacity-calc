@@ -2,8 +2,11 @@ package org.dragan
 
 import scalax.collection.Graph
 import scalax.collection.GraphEdge.DiEdge
+import scalax.collection.GraphPredef.EdgeLikeIn
 
 package object puzzle {
+
+  type MutableGraph[N,E[X] <: EdgeLikeIn[X]] = scalax.collection.mutable.Graph[N,E]
 
   case class Dev(name: String)
 

@@ -1,4 +1,6 @@
-package org.dragan.puzzle
+package org.dragan.puzzle.game
+
+import org.dragan.puzzle._
 
 import scala.collection.mutable
 
@@ -14,7 +16,7 @@ case class Game(
     val results: mutable.Set[Choice] = mutable.Set.empty[Choice]
 
     val moveChoices = Move(currentState.currentGraph).choices()
-    //move rule
+
     results ++= moveChoices.filter(
       choice => restrics.map(_.restrict(choice, currentState)).reduceLeft(_ && _)
     )

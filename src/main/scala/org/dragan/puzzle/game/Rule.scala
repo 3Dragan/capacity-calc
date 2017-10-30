@@ -1,4 +1,6 @@
-package org.dragan.puzzle
+package org.dragan.puzzle.game
+
+import org.dragan.puzzle._
 
 sealed trait Rule[-T <: Choice] {
 

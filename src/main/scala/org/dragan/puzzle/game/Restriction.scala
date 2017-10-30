@@ -1,4 +1,6 @@
-package org.dragan.puzzle
+package org.dragan.puzzle.game
+
+import org.dragan.puzzle.{GameState, Task}
 
 sealed trait Restriction[-T] {
   def restrict: (T, GameState) => Boolean
